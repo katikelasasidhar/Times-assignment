@@ -46,9 +46,9 @@ notes.getStories = (req, res) => {
 
 for (var i = 1; i < title.length; i++) {
     ent={}
-    ent.title = title[i].toString().split(",")[1]+"/";
-    ent.link = "https://time.com/"+link[i].toString().split(",")[1];
-    result.push(ent);
+    ent.title = title[i].toString().split(",")[1];
+    ent.link = "https://time.com/"+link[i].toString().split(",")[1]+"/";
+    result.push(JSON.parse(JSON.stringify(ent)));
     //console.log(result)
   }
    //result = JSON.stringify(result);
